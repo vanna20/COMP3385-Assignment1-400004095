@@ -27,8 +27,8 @@
 
     public function update(Observable $obj)
     {
-        $rec = $obs->giveUpdate();
-        foreach ($rec as $k=>$r) {
+        $viewUpdate = $obs->giveUpdate();
+        foreach ($viewUpdate as $k=>$r) {
             $this->addVar($k, $r);
         }
         $this->display();
